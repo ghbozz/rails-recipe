@@ -1,3 +1,5 @@
 .container
   %h2= @recipe.title
   %p= @recipe.description
+  = link_to 'edit recipe', edit_recipe_path(@recipe), class: 'btn btn-default'
+  = link_to 'delete recipe', recipe_path, method: :delete, class: 'btn btn-danger'
