@@ -10,6 +10,7 @@ gem 'rails', '5.2.1'
 gem 'redis'
 gem 'haml', '~> 5.0', '>= 5.0.4'
 gem "paperclip", "~> 6.0.0"
+gem "cocoon"
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
