@@ -1,8 +1,13 @@
 .banner{:style => "background-image: url('https://res.cloudinary.com/qriyo/image/upload/v1498814320/10227e-food-on-the-table-top-hd-wallpaper_tlnepw.jpg')"}
 
 .container
-  - @recipes.each do |recipe|
-    .recipe-wrapper
-      %h3= link_to recipe.title, recipe_path(recipe)
-      %p= recipe.description
+  - @recipes.each_slice(3) do |recipes|
+    .row
+      - recipes.each do |recipe|
+        .col-md-4
+          .recipe
+            .image_wrapper
+              = link_to recipe do
+                = image_tag recipe.image.url(:medium)
+            %h2= link_to recipe.title, recipe
 
